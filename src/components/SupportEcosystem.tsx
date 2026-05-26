@@ -1,5 +1,8 @@
-import { Heart, Coffee, MessagesSquare, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { useState } from 'react';
+import gofundmeLogo from '../../Logos/gofundme_logo.png';
+import kofiLogo from '../../Logos/kofi_logo.webp';
+import redditLogo from '../../Logos/reddit_logo.webp';
 
 export default function SupportEcosystem() {
     const [email, setEmail] = useState('');
@@ -23,10 +26,10 @@ export default function SupportEcosystem() {
         <div className="space-y-6">
            <h3 className="text-[11px] font-bold tracking-widest uppercase opacity-55 text-[var(--text-secondary)] px-2 text-center md:text-left">Fund the Project</h3>
            <div className="grid md:grid-cols-5 gap-6 md:gap-8">
-               <a href="#" className="col-span-1 md:col-span-3 group block p-8 md:p-10 rounded-[40px] bg-[var(--surface-card)] border border-[var(--border-subtle)] hover:border-[var(--border-strong)] transition-all duration-700 soft-shadow">
+               <a href="https://www.gofundme.com/f/unmask-a-healing-app-for-neurodivergent-people" target="_blank" rel="noopener noreferrer" className="col-span-1 md:col-span-3 group block p-8 md:p-10 rounded-[40px] bg-[var(--surface-card)] border border-[var(--border-subtle)] hover:border-[var(--border-strong)] transition-all duration-700 soft-shadow hover:-translate-y-0.5">
                    <div className="flex flex-col md:flex-row items-start gap-6 md:gap-8">
-                       <div className="p-4 bg-[var(--surface-muted)] rounded-[24px] text-[var(--accent-strong)] group-hover:bg-[var(--accent)] group-hover:text-[var(--text-inverse)] transition-colors duration-700">
-                           <Heart size={26} strokeWidth={1.5} />
+                       <div className="px-4 py-3 min-h-14 min-w-34 flex items-center justify-center bg-[var(--surface-muted)] rounded-[24px] border border-[var(--border-subtle)] transition-all duration-700 group-hover:scale-[1.03] group-hover:border-[var(--border-strong)]">
+                           <img src={gofundmeLogo} alt="GoFundMe" className="h-7 w-auto max-w-28 object-contain" loading="lazy" />
                        </div>
                        <div className="space-y-3 flex-1">
                             <h3 className="font-subtitle text-2xl font-bold text-[var(--text-primary)] pb-1">Support the Growth</h3>
@@ -35,9 +38,9 @@ export default function SupportEcosystem() {
                    </div>
                </a>
 
-               <a href="#" className="col-span-1 md:col-span-2 group block p-8 md:p-10 rounded-[40px] bg-[var(--surface-card)] border border-[var(--border-subtle)] hover:border-[var(--border-strong)] transition-all duration-700 soft-shadow flex flex-col justify-between min-h-[240px]">
-                   <div className="p-4 bg-[var(--surface-muted)] w-fit rounded-[24px] text-[var(--accent-strong)] group-hover:bg-[var(--accent)] group-hover:text-[var(--text-inverse)] transition-colors duration-700 mb-6">
-                       <Coffee size={24} strokeWidth={1.5} />
+               <a href="https://ko-fi.com/unmask" target="_blank" rel="noopener noreferrer" className="col-span-1 md:col-span-2 group block p-8 md:p-10 rounded-[40px] bg-[var(--surface-card)] border border-[var(--border-subtle)] hover:border-[var(--border-strong)] transition-all duration-700 soft-shadow flex flex-col justify-between min-h-[240px] hover:-translate-y-0.5">
+                   <div className="px-4 py-3 min-h-14 min-w-34 w-fit flex items-center justify-center bg-[var(--surface-muted)] rounded-[24px] border border-[var(--border-subtle)] transition-all duration-700 group-hover:scale-[1.03] group-hover:border-[var(--border-strong)] mb-6">
+                       <img src={kofiLogo} alt="Ko-fi" className="h-7 w-auto max-w-28 object-contain" loading="lazy" />
                    </div>
                    <div className="space-y-2">
                         <h3 className="font-subtitle text-xl font-bold text-[var(--text-primary)]">Buy me a coffee</h3>
@@ -51,9 +54,9 @@ export default function SupportEcosystem() {
         <div className="space-y-6">
            <h3 className="text-[11px] font-bold tracking-widest uppercase opacity-55 text-[var(--text-secondary)] px-2 text-center md:text-left">Join & Witness</h3>
            <div className="grid md:grid-cols-5 gap-6 md:gap-8">
-               <a href="#" className="col-span-1 md:col-span-2 group block p-8 md:p-10 rounded-[40px] bg-[var(--text-primary)] text-[var(--text-inverse)] border border-transparent hover:bg-[var(--accent-strong)] transition-all duration-700 soft-shadow flex flex-col justify-between min-h-[240px]">
-                   <div className="p-4 bg-[var(--text-inverse)]/10 w-fit rounded-[24px] text-[var(--text-inverse)] transition-colors duration-700 mb-6">
-                       <MessagesSquare size={24} strokeWidth={1.5} />
+               <a href="https://www.reddit.com/r/unmasksafely/" target="_blank" rel="noopener noreferrer" className="col-span-1 md:col-span-2 group block p-8 md:p-10 rounded-[40px] bg-[var(--text-primary)] text-[var(--text-inverse)] border border-transparent hover:bg-[var(--accent-strong)] transition-all duration-700 soft-shadow flex flex-col justify-between min-h-[240px] hover:-translate-y-0.5">
+                   <div className="px-4 py-3 min-h-14 min-w-34 w-fit flex items-center justify-center bg-[var(--text-inverse)]/10 rounded-[24px] border border-[var(--text-inverse)]/20 transition-all duration-700 mb-6 group-hover:scale-[1.03]">
+                       <img src={redditLogo} alt="Reddit" className="h-7 w-auto max-w-28 object-contain" loading="lazy" />
                    </div>
                    <div className="space-y-3">
                         <h3 className="font-subtitle text-xl font-bold pb-1">The Subreddit</h3>
