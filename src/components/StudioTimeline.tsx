@@ -7,8 +7,8 @@ export default function StudioTimeline() {
   return (
     <section className="space-y-16 max-w-5xl mx-auto">
       <div className="text-center space-y-6">
-        <h2 className="font-serif text-4xl text-[#10241f] italic">Behind the Curtain</h2>
-        <p className="text-[#3b2515] opacity-85 text-lg max-w-2xl mx-auto leading-relaxed">
+        <h2 className="font-serif text-4xl text-[var(--text-primary)] italic">Behind the Curtain</h2>
+        <p className="text-[var(--text-secondary)] opacity-90 text-lg max-w-2xl mx-auto leading-relaxed">
           We are unlearning sterile "productivity" tracking. This is a reflection space built with lived experience.
         </p>
       </div>
@@ -24,16 +24,16 @@ export default function StudioTimeline() {
             setView(v => v === 'quo' ? 'vision' : 'quo');
           }
         }}
-        className="flex justify-center p-1.5 bg-[#ffffff]/70 rounded-[32px] w-fit mx-auto border border-[#10241f]/10 backdrop-blur-md soft-shadow cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#c95e2f] focus:ring-offset-4 group"
+        className="flex justify-center p-1.5 bg-[var(--surface-glass)] rounded-[32px] w-fit mx-auto border border-[var(--border-subtle)] backdrop-blur-md soft-shadow cursor-pointer focus:outline-none focus:ring-2 focus:ring-[var(--ring-color)] focus:ring-offset-4 group"
         aria-label="Toggle between The Status Quo and Our Vision"
       >
         <div 
-          className={`px-6 py-3 rounded-[24px] text-sm font-bold uppercase tracking-widest transition-all duration-700 ${view === 'quo' ? 'bg-[#c95e2f] text-[#ffffff] shadow-md' : 'text-[#3b2515] opacity-50 group-hover:opacity-100'}`}
+          className={`px-6 py-3 rounded-[24px] text-sm font-bold uppercase tracking-widest transition-all duration-700 ${view === 'quo' ? 'bg-[var(--accent)] text-[var(--text-inverse)] shadow-md' : 'text-[var(--text-secondary)] opacity-55 group-hover:opacity-100'}`}
         >
           The Status Quo
         </div>
         <div 
-          className={`px-6 py-3 rounded-[24px] text-sm font-bold uppercase tracking-widest transition-all duration-700 ${view === 'vision' ? 'bg-[#c95e2f] text-[#ffffff] shadow-md' : 'text-[#3b2515] opacity-50 group-hover:opacity-100'}`}
+          className={`px-6 py-3 rounded-[24px] text-sm font-bold uppercase tracking-widest transition-all duration-700 ${view === 'vision' ? 'bg-[var(--accent)] text-[var(--text-inverse)] shadow-md' : 'text-[var(--text-secondary)] opacity-55 group-hover:opacity-100'}`}
         >
           Our Vision
         </div>
@@ -106,12 +106,12 @@ export default function StudioTimeline() {
 
 function Card({ title, desc, highlight = false }: { title: string; desc: string; highlight?: boolean }) {
   return (
-    <div className={`p-8 rounded-[40px] transition-colors duration-1000 ${highlight ? 'bg-[#ebd2a8]/70 border border-[#c95e2f]/25' : 'bg-[#ffffff]/45 border border-[#10241f]/10'} soft-shadow`}>
+    <div className={`p-8 rounded-[40px] transition-colors duration-1000 ${highlight ? 'bg-[var(--surface-muted)] border border-[var(--border-strong)]' : 'bg-[var(--surface-glass)] border border-[var(--border-subtle)]'} soft-shadow`}>
       <div className="flex items-center gap-3 mb-4">
-          {highlight && <div className="w-2 h-2 rounded-full bg-[#c95e2f] animate-pulse"></div>}
-          <h3 className="font-serif text-xl font-bold text-[#10241f]">{title}</h3>
+          {highlight && <div className="w-2 h-2 rounded-full bg-[var(--accent)] animate-pulse"></div>}
+          <h3 className="font-serif text-xl font-bold text-[var(--text-primary)]">{title}</h3>
       </div>
-      <p className="text-[#3b2515] opacity-85 leading-relaxed text-[15px]">{desc}</p>
+      <p className="text-[var(--text-secondary)] opacity-90 leading-relaxed text-[15px]">{desc}</p>
     </div>
   )
 }

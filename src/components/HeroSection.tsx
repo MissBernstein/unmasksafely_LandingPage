@@ -62,22 +62,22 @@ export default function HeroSection({ vibe, setVibe }: HeroSectionProps) {
             alt="Unmask full logo"
             className="h-14 md:h-16 w-auto mx-auto object-contain"
           />
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-[#10241f] tracking-tight">
+          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-[var(--text-primary)] tracking-tight">
             A private space <br className="hidden md:block"/>
             to notice what masking <br className="hidden md:block"/>
             has made <span className="italic font-normal">invisible</span>.
           </h1>
-          <p className="text-lg md:text-xl text-[#3b2515] opacity-85 max-w-2xl mx-auto leading-relaxed">
-            A sensory friendly reflection space for neurodivergent people learning to notice tension, masking, energy, and relational safety - without judgement, pressure, or pressure.
+          <p className="text-lg md:text-xl text-[var(--text-secondary)] opacity-90 max-w-2xl mx-auto leading-relaxed">
+            A sensory friendly reflection space for neurodivergent people learning to notice tension, masking, energy, and relational safety - without judgement or pressure.
           </p>
         </div>
 
         <div className="w-full max-w-xl mx-auto pt-4 md:pt-8">
-            <div className={`p-8 md:p-10 rounded-[40px] soft-shadow backdrop-blur-sm text-left relative z-10 transition-all duration-700 ease-out ${edgePing ? 'bg-[#ffffff]/75 border border-[#c95e2f]/35 scale-[1.02] shadow-xl' : 'bg-[#ffffff]/45 border border-[#ffffff]/80 scale-100 shadow-none'}`}>
+            <div className={`p-8 md:p-10 rounded-[40px] soft-shadow backdrop-blur-sm text-left relative z-10 transition-all duration-700 ease-out ${edgePing ? 'bg-[var(--surface-card)]/80 border border-[var(--border-strong)] scale-[1.02] shadow-xl' : 'bg-[var(--surface-glass)] border border-[var(--border-subtle)] scale-100 shadow-none'}`}>
                 <div className="flex justify-between items-end mb-8 relative">
                   <div className="space-y-2">
-                    <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 text-[#3b2515]">The Vibe Check</span>
-                    <p className="font-serif italic text-xl text-[#10241f]">How much are you holding back?</p>
+                    <span className="text-[10px] uppercase tracking-widest font-bold opacity-55 text-[var(--text-secondary)]">The Vibe Check</span>
+                    <p className="font-serif italic text-xl text-[var(--text-primary)]">How much are you holding back?</p>
                   </div>
                 </div>
                 
@@ -92,13 +92,13 @@ export default function HeroSection({ vibe, setVibe }: HeroSectionProps) {
                     />
                 </div>
                 
-                <div className="flex justify-between text-[11px] font-bold tracking-tighter uppercase text-[#3b2515] mt-4 mb-8">
+                <div className="flex justify-between text-[11px] font-bold tracking-tighter uppercase text-[var(--text-secondary)] mt-4 mb-8">
                     <span style={{ opacity: Math.max(0.3, maskedOpacity) }} className="transition-opacity duration-700 ease-in-out">Masked</span>
                     <span style={{ opacity: Math.max(0.3, unmaskedOpacity) }} className="transition-opacity duration-700 ease-in-out">Coming Home</span>
                 </div>
 
-                <div className="pt-6 border-t border-[#3b2515]/15 text-center flex items-center justify-center min-h-[4rem]">
-                  <p className="text-[15px] italic font-serif text-[#3b2515] opacity-85 transition-all duration-1000 ease-in-out">
+                <div className="pt-6 border-t border-[var(--border-subtle)] text-center flex items-center justify-center min-h-[4rem]">
+                  <p className="text-[15px] italic font-serif text-[var(--text-secondary)] opacity-90 transition-all duration-1000 ease-in-out" aria-live="polite">
                     {currentMessage}
                     </p>
                 </div>
@@ -106,7 +106,7 @@ export default function HeroSection({ vibe, setVibe }: HeroSectionProps) {
         </div>
       </div>
 
-            <div className="absolute -bottom-8 animate-pulse text-[#c95e2f] opacity-70">
+            <div className="absolute -bottom-8 animate-pulse text-[var(--accent)] opacity-75">
          <ArrowDown size={24} strokeWidth={2} />
       </div>
     </section>

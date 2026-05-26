@@ -16,6 +16,52 @@
   --animate-breathe: breathe 10s ease-in-out infinite;
 }
 
+:root {
+  --surface-page: var(--color-wheat);
+  --surface-card: var(--color-white);
+  --surface-glass: color-mix(in srgb, var(--color-white) 72%, transparent);
+  --surface-muted: color-mix(in srgb, var(--color-wheat) 85%, var(--color-white) 15%);
+  --surface-overlay: color-mix(in srgb, var(--color-white) 86%, transparent);
+  --text-primary: var(--color-evergreen);
+  --text-secondary: var(--color-dark-coffee);
+  --text-inverse: var(--color-white);
+  --accent: var(--color-spicy-paprika);
+  --accent-strong: var(--color-chocolate-brown);
+  --border-subtle: color-mix(in srgb, var(--color-evergreen) 16%, transparent);
+  --border-strong: color-mix(in srgb, var(--color-spicy-paprika) 42%, transparent);
+  --blob-primary: var(--color-wheat);
+  --blob-secondary: var(--color-spicy-paprika);
+  --ring-color: var(--color-spicy-paprika);
+  --soft-shadow-color: rgba(16, 36, 31, 0.12);
+}
+
+:root[data-theme='dark'] {
+  --surface-page: var(--color-evergreen);
+  --surface-card: color-mix(in srgb, var(--color-dark-coffee) 88%, var(--color-evergreen) 12%);
+  --surface-glass: color-mix(in srgb, var(--color-dark-coffee) 62%, transparent);
+  --surface-muted: color-mix(in srgb, var(--color-dark-coffee) 72%, var(--color-evergreen) 28%);
+  --surface-overlay: color-mix(in srgb, var(--color-evergreen) 88%, transparent);
+  --text-primary: var(--color-wheat);
+  --text-secondary: color-mix(in srgb, var(--color-wheat) 88%, var(--color-white) 12%);
+  --text-inverse: var(--color-evergreen);
+  --accent: var(--color-spicy-paprika);
+  --accent-strong: var(--color-chocolate-brown);
+  --border-subtle: color-mix(in srgb, var(--color-wheat) 24%, transparent);
+  --border-strong: color-mix(in srgb, var(--color-spicy-paprika) 58%, transparent);
+  --blob-primary: color-mix(in srgb, var(--color-dark-coffee) 74%, var(--color-evergreen) 26%);
+  --blob-secondary: color-mix(in srgb, var(--color-spicy-paprika) 40%, transparent);
+  --ring-color: var(--color-wheat);
+  --soft-shadow-color: rgba(16, 36, 31, 0.35);
+}
+
+html {
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+}
+
 @keyframes breathe {
   0%, 100% {
     transform: scale(1) translate(0, 0);
@@ -29,10 +75,25 @@
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-unmask-light);
-  color: var(--color-unmask-dark);
-  transition: background-color 1s ease-in-out;
+  background-color: var(--surface-page);
+  color: var(--text-primary);
+  transition: background-color 0.5s ease, color 0.5s ease;
   -webkit-font-smoothing: antialiased;
+}
+
+a,
+button,
+input,
+[role='switch'] {
+  transition: box-shadow 0.2s ease, outline-color 0.2s ease;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[role='switch']:focus-visible {
+  outline: 2px solid var(--ring-color);
+  outline-offset: 3px;
 }
 
 .font-serif {
@@ -56,10 +117,10 @@ input[type=range]::-webkit-slider-thumb {
   appearance: none;
   width: 42px;
   height: 42px;
-  background: var(--color-unmask-accent);
+  background: var(--accent);
   border-radius: 50%;
   cursor: pointer;
-  border: 6px solid var(--color-white);
+  border: 6px solid var(--text-inverse);
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   margin-top: -18px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -81,5 +142,21 @@ input[type=range]:hover::-webkit-slider-runnable-track {
 }
 
 .soft-shadow {
-  box-shadow: 0 10px 30px -10px rgba(16, 36, 31, 0.12);
+  box-shadow: 0 10px 30px -10px var(--soft-shadow-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-breathe,
+  .animate-pulse {
+    animation: none !important;
+  }
 }
