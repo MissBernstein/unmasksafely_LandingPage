@@ -11,7 +11,8 @@
   --color-unmask-light: var(--color-wheat);
   --color-unmask-accent: var(--color-spicy-paprika);
   --color-unmask-secondary: var(--color-white);
-  --font-serif: "Libre Baskerville", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-serif: "Caveat", cursive;
+  --font-subtitle: "Solway", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --animate-breathe: breathe 10s ease-in-out infinite;
 }
@@ -98,6 +99,10 @@ input:focus-visible,
 
 .font-serif {
   font-family: var(--font-serif);
+}
+
+.font-subtitle {
+  font-family: var(--font-subtitle);
 }
 
 ::selection {

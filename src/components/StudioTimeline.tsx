@@ -109,7 +109,7 @@ function Card({ title, desc, highlight = false }: { title: string; desc: string;
     <div className={`p-8 rounded-[40px] transition-colors duration-1000 ${highlight ? 'bg-[var(--surface-muted)] border border-[var(--border-strong)]' : 'bg-[var(--surface-glass)] border border-[var(--border-subtle)]'} soft-shadow`}>
       <div className="flex items-center gap-3 mb-4">
           {highlight && <div className="w-2 h-2 rounded-full bg-[var(--accent)] animate-pulse"></div>}
-          <h3 className="font-serif text-xl font-bold text-[var(--text-primary)]">{title}</h3>
+          <h3 className="font-subtitle text-xl font-bold text-[var(--text-primary)]">{title}</h3>
       </div>
       <p className="text-[var(--text-secondary)] opacity-90 leading-relaxed text-[15px]">{desc}</p>
     </div>

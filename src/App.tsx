@@ -143,7 +143,7 @@ export default function App() {
             />
             <div>
               <p className="text-[10px] uppercase tracking-[0.2em] font-bold opacity-50 mb-1">Design by Lived Experience</p>
-              <p className="font-serif italic text-sm text-[var(--text-secondary)]/90">Unmask Safely &copy; 2024</p>
+              <p className="font-subtitle italic text-sm text-[var(--text-secondary)]/90">Unmask Safely &copy; 2024</p>
             </div>
           </div>
         </footer>

@@ -29,7 +29,7 @@ export default function SupportEcosystem() {
                            <Heart size={26} strokeWidth={1.5} />
                        </div>
                        <div className="space-y-3 flex-1">
-                            <h3 className="font-serif text-2xl font-bold text-[var(--text-primary)] pb-1">Support the Growth</h3>
+                            <h3 className="font-subtitle text-2xl font-bold text-[var(--text-primary)] pb-1">Support the Growth</h3>
                             <p className="text-[var(--text-secondary)] opacity-90 leading-relaxed text-[15px] max-w-md">This project is independent and needs care. Your support on GoFundMe directly funds development, sensory-friendly design research, and secure hosting.</p>
                        </div>
                    </div>
@@ -40,7 +40,7 @@ export default function SupportEcosystem() {
                        <Coffee size={24} strokeWidth={1.5} />
                    </div>
                    <div className="space-y-2">
-                        <h3 className="font-serif text-xl font-bold text-[var(--text-primary)]">Buy me a coffee</h3>
+                        <h3 className="font-subtitle text-xl font-bold text-[var(--text-primary)]">Buy me a coffee</h3>
                         <p className="text-[var(--text-secondary)] opacity-90 text-[15px]">A small token of appreciation via Ko-Fi.</p>
                    </div>
                </a>
@@ -56,7 +56,7 @@ export default function SupportEcosystem() {
                        <MessagesSquare size={24} strokeWidth={1.5} />
                    </div>
                    <div className="space-y-3">
-                        <h3 className="font-serif text-xl font-bold pb-1">The Subreddit</h3>
+                        <h3 className="font-subtitle text-xl font-bold pb-1">The Subreddit</h3>
                         <p className="opacity-80 text-[15px] leading-relaxed">Join the quiet community. We discuss masking, burnout, and unlearning.</p>
                    </div>
                </a>
@@ -69,7 +69,7 @@ export default function SupportEcosystem() {
                                  <Mail size={18} strokeWidth={2} />
                                  <span className="text-[10px] tracking-widest font-bold uppercase opacity-80">The Update Ritual</span>
                              </div>
-                             <h3 className="font-serif text-2xl font-bold text-[var(--text-primary)]">Quiet Notes.</h3>
+                             <h3 className="font-subtitle text-2xl font-bold text-[var(--text-primary)]">Quiet Notes.</h3>
                              <p className="opacity-80 text-[15px] max-w-md leading-relaxed">No spam. No marketing funnels. I'll only write when there is something meaningful to share about the project's evolution.</p>
                          </div>
 
@@ -83,7 +83,7 @@ export default function SupportEcosystem() {
                                      placeholder="Quietly entering email..." 
                                      className="bg-[var(--surface-card)]/75 border border-[var(--border-subtle)] text-[var(--text-secondary)] placeholder:text-[var(--text-secondary)]/55 px-5 py-4 rounded-[24px] focus:outline-none focus:border-[var(--accent)] transition-all flex-1 min-w-0 font-sans"
                                  />
-                                 <button type="submit" className="bg-[var(--accent)] hover:bg-[var(--accent-strong)] text-[var(--text-inverse)] px-8 py-4 rounded-[24px] transition-all duration-300 soft-shadow font-serif italic whitespace-nowrap">
+                                 <button type="submit" className="bg-[var(--accent)] hover:bg-[var(--accent-strong)] text-[var(--text-inverse)] px-8 py-4 rounded-[24px] transition-all duration-300 soft-shadow font-subtitle italic whitespace-nowrap">
                                      Witness the journey
                                  </button>
                              </form>

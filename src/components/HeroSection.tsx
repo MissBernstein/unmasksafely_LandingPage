@@ -77,7 +77,7 @@ export default function HeroSection({ vibe, setVibe }: HeroSectionProps) {
                 <div className="flex justify-between items-end mb-8 relative">
                   <div className="space-y-2">
                     <span className="text-[10px] uppercase tracking-widest font-bold opacity-55 text-[var(--text-secondary)]">The Vibe Check</span>
-                    <p className="font-serif italic text-xl text-[var(--text-primary)]">How much are you holding back?</p>
+                    <p className="font-subtitle italic text-xl text-[var(--text-primary)]">How much are you holding back?</p>
                   </div>
                 </div>
                 
@@ -98,7 +98,7 @@ export default function HeroSection({ vibe, setVibe }: HeroSectionProps) {
                 </div>
 
                 <div className="pt-6 border-t border-[var(--border-subtle)] text-center flex items-center justify-center min-h-[4rem]">
-                  <p className="text-[15px] italic font-serif text-[var(--text-secondary)] opacity-90 transition-all duration-1000 ease-in-out" aria-live="polite">
+                  <p className="text-[15px] italic font-sans text-[var(--text-secondary)] opacity-90 transition-all duration-1000 ease-in-out" aria-live="polite">
                     {currentMessage}
                     </p>
                 </div>
