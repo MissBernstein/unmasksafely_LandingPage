@@ -1,0 +1,6 @@
+{
+  "name": "Unmask Prototype",
+  "description": "A sensory-friendly reflection space landing page prototype.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
